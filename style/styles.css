@@ -1,0 +1,38 @@
+.react-toast {
+  position: fixed;
+  left: 5%;
+  padding: 10px;
+  width: calc(90% - 20px);
+  background-color: #909399;
+  /* background-color: red; */
+  color: white;
+  text-align: center;
+  line-height: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.react-toast-success {
+  background-color: #67C23A;
+}
+
+.react-toast-warning {
+  background-color: #E6A23C;
+}
+
+.react-toast-danger {
+  background-color: #F56C6C;
+}
+
+.react-toast-bottom {
+  bottom: 10px;
+}
+
+.react-toast-top {
+  top: 10px;
+}
+
+.react-toast-center {
+  bottom: 50%;
+  transform: translateY(50%);
+}

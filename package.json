@@ -1,0 +1,25 @@
+{
+  "name": "react-tal-toast",
+  "version": "0.0.1",
+  "description": "A toast Component like Android(IOS) for react web Application.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tal007/react-tal-toast.git"
+  },
+  "keywords": [
+    "react",
+    "toast",
+    "react-toast",
+    "tal"
+  ],
+  "author": "taloo7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tal007/react-tal-toast/issues"
+  },
+  "homepage": "https://github.com/tal007/react-tal-toast#readme"
+}
