@@ -1,17 +1,9 @@
-# Description
-This is a library for react. There are some common react components.
-
-## React-toast
-A toast like android or IOS toast. Both work in PC and mobile.
-
-### Usage
-```js
+import React, { Component } from 'react'
+import ReactDOM from 'react-dom'
 import reactToast, { taltoast } from 'react-tal-toast'
 import "react-tal-toast/src/styles.css"
-```
 
-```js
-class Toast extends Component {
+class App extends Component {
   toastFromBottom = _ => {
     taltoast()
   }
@@ -50,12 +42,5 @@ class Toast extends Component {
     )
   }
 }
-```
 
-### props
-|props|value|default|
-|:---:|:---:|:---:|
-|text| The message you want to display||
-|className|The animation className(See https://daneden.github.io/animate.css/)|fadeInUp|
-|timeout|The message show time|2000|
-|position|The position of the message(one of top, bottom, center)|bottom|
+ReactDOM.render(<App />, document.getElementById("root"))

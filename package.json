@@ -4,22 +4,53 @@
   "description": "A toast Component like Android(IOS) for react web Application.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rimraf dist && cross-env NODE_ENV=development webpack-dev-server --hot --inline",
+    "build": "rimraf lib && cross-env NODE_ENV=production  && npm run build:demo && babel src --out-dir lib",
+    "build:demo": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tal007/react-tal-toast.git"
   },
+  "files": [
+    "lib",
+    "src/styles.css",
+    "README.md"
+  ],
   "keywords": [
     "react",
     "toast",
     "react-toast",
-    "tal"
+    "tal",
+    "react-tal-toast"
   ],
   "author": "taloo7",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/tal007/react-tal-toast/issues"
   },
-  "homepage": "https://github.com/tal007/react-tal-toast#readme"
+  "homepage": "https://github.com/tal007/react-tal-toast#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/plugin-transform-react-jsx": "^7.7.7",
+    "@babel/preset-react": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "cross-env": "^6.0.3",
+    "css-loader": "^3.4.0",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "rimraf": "^3.0.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
+  "peerDependencies": {
+    "react": "^16.x",
+    "react-dom": "^16.x"
+  }
 }
